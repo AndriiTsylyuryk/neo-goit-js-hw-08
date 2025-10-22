@@ -89,10 +89,10 @@ const galleryClick = gallery.addEventListener("click", handleClick);
 function handleClick(event) {
   event.preventDefault();
   const target = event.target;
-  largeImg = target.dataset.source;
   if (target.nodeName !== "IMG") {
     return;
   }
+  const largeImg = target.dataset.source;
   const instance = basicLightbox.create(`
 	<div class = "modal">
   <img src ="${largeImg}">
